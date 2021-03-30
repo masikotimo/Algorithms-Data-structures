@@ -29,10 +29,26 @@
     
 // }
 
-function isPrime(num) {
-    for(var i = 2; i <= num; i++)
-      if(num % i === 0) return false;
-    return num > 1;
+function isPrime(input) {
+  var inputArray = input.split('\n').map(Number);
+  inputArray.shift();
+  inputArray.forEach(element => {
+    if (calcPrime(element)) {
+      console.log('Prime');
+   } else {
+      console.log('Not prime');
+   }
+  });
+    
   }
 
-console.log(isPrime(17))
+function calcPrime(x){
+  for(var i = 2; i < x; i++)
+      if(x % i === 0) return false;
+    return x > 1;
+}
+
+console.log(isPrime(`3
+12
+5
+7`))
