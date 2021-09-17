@@ -12,7 +12,7 @@
 //     console.log('nop')
 // }
 
-class Solution {
+class Palindrome {
     constructor(){
         this.stack = []
         this.queue = []
